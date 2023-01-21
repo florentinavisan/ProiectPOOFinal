@@ -182,7 +182,8 @@ Locatie::~Locatie()
 
 ostream& operator<<(ostream& out, Locatie s)
 {
-	out << "Locul" << s.getNrLocuriPerZona() << "din Zona" << s.getZone();
+	out << "Locul" << s.getNrLocuriPerZona() << endl;
+	out << "din Zona" << s.getZone() << endl;
 	return out;
 }
 

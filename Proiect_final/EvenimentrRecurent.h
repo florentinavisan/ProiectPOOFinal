@@ -10,15 +10,15 @@ private:
 	int recurenta;
 public:
 
-	EvenimentRecurent() :Eveniment()
-	{
+	EvenimentRecurent();// : Eveniment()
+	/*{
 		recurenta = 0;
-	}
+	}*/
 
-	EvenimentRecurent(string data, string ora, string denumire, Locatie locatie, int recurenta) :Eveniment(data, ora, denumire, locatie)
-	{
+	EvenimentRecurent(string data, string ora, string denumire, Locatie locatie, int recurenta);// :Eveniment(data, ora, denumire, locatie);
+	/*{
 		this->recurenta = recurenta;
-	}
+	}*/
 
 	int getRecurenta();
 

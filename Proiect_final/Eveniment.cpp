@@ -178,7 +178,10 @@ bool Eveniment:: operator!=(const Eveniment& s)
 
 ostream& operator<<(ostream& out, Eveniment s)
 {
-	out << "Evenimentul" << s.getDenumire() << " " << "are loc pe data" << s.getData() << " " << "si ora : " << s.getOra() << " are locatia " << *s.l;
+	out << "Evenimentul" << s.getDenumire() << endl;
+	out << "Data" << s.getData() << endl;
+	out << "ORA" << s.getOra() << endl;
+	out<< "Locatia" << *s.l;
 	return out;
 }
 

@@ -8,14 +8,19 @@ using namespace std;
 
 int main()
 {
-	Eveniment eveniment;
+	//Eveniment eveniment;
 	Locatie locatie;
 	Bilet bilet;
-	char* standard;
-	int* x;
+	char* zone;
+	zone = new char[strlen("a") + 1];
+		strcpy_s(zone, strlen("a") + 1, "a");
+	int x[1];
+	x[0] = 4;
 
 
-	Eveniment("11.07.2022", "11:30", "Untold", locatie);
+
+	Eveniment eveniment("11.07.2022", "11:30", "Untold", locatie);
+	cout << eveniment;
 
 	//eveniment.valideazaData("11.07.2023");
 
@@ -40,7 +45,8 @@ int main()
 	//cout<<eveniment.getDenumire();
 
 
-	Bilet("standard", 20, 50, eveniment);
+	Bilet b(zone, 20, 50, eveniment);
+	cout << b;
 
 	//bilet.validareBilet();
 
@@ -54,7 +60,8 @@ int main()
 
 	//bilet.setEveniment(eveniment);
 
-	Locatie("standard", 3, 10);
+	Locatie l(zone, 3, x);
+	cout << l;
 
 	/*cout<<locatie.getZone();
 	cout<<locatie.getNrZone();

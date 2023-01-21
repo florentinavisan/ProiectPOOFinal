@@ -14,6 +14,7 @@ Bilet::Bilet() : nrMaximBilete(100)
 //constructor cu parametrii
 Bilet::Bilet(char* tip, int nrBilete, int nrMaximBilete, Eveniment ev) : nrMaximBilete(nrMaximBilete)
 {
+
 	if (tip != NULL && strlen(tip) != 0 && ev.validareeveniment() == true)
 	{
 
@@ -22,7 +23,7 @@ Bilet::Bilet(char* tip, int nrBilete, int nrMaximBilete, Eveniment ev) : nrMaxim
 
 		this->id = nrBilete++;
 
-		e = ev;
+		this->e = new Eveniment( ev);
 
 	}
 	else cout << "Date incorecte";
@@ -76,7 +77,7 @@ int Bilet::getId()
 
 Eveniment Bilet::getEveniment()
 {
-	return e;
+	return *e;
 }
 
 //setteri
@@ -93,7 +94,7 @@ void Bilet::setEveniment(Eveniment e)
 {
 	if (e.validareeveniment() == true)
 	{
-		this->e = e;
+		this->e = new Eveniment(e);
 	}
 }
 
@@ -117,7 +118,9 @@ Bilet::~Bilet()
 
 ostream& operator<<(ostream& out, Bilet& s)
 {
-	out << "Tipul biletului este:" << s.getTip() << " " << ",are id-ul" << s.getId() << " " << "la evenimentul" << s.getEveniment();
+	out << "Tipul biletului este:" << s.getTip() << endl;
+	out << "ID:" << s.getId() << endl;
+	out << "Evenimentull" << s.getEveniment() << endl;
 	return out;
 }
 

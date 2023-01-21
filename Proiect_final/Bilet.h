@@ -12,7 +12,7 @@ private:
 	int id;
 	int loc;
 	const int nrMaximBilete;
-	Eveniment e;
+	Eveniment *e;
 
 
 public:
